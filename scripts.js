@@ -10,7 +10,15 @@ let gridSize = 256;
 for (i = 0; i < gridSize; i++){
     let pixel = document.createElement("div");
     pixel.className = "pixel";
+    pixel.id = "inactive";
     drawingField.appendChild(pixel);
-
+    pixel.onmouseover = function () {
+    pixel.style.backgroundColor = "black";
+    }
+        
+        
 }
 
+// on mouseover, change pixel div id from "inactive" to "active"
+
+document.querySelector(".pixel")
