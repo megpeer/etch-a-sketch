@@ -1,24 +1,36 @@
 
-// query selector container
 const drawingField = document.querySelector("#container");
+let pixel;
+let size = 20;
 
-//temporary grid size
-let gridSize = 256;
-
-// create div with id "pixel"
-//append pixel to container (might need to use a for loop to make 16x16 divs)
-for (i = 0; i < gridSize; i++){
-    let pixel = document.createElement("div");
-    pixel.className = "pixel";
-    pixel.id = "inactive";
-    drawingField.appendChild(pixel);
-    pixel.onmouseover = function () {
-    pixel.style.backgroundColor = "black";
+function createGrid() {
+    for (i = 0; i < size * size; i++){
+        let pixel = document.createElement("div");
+        pixel.style.height = `calc(100%/${size})`;
+        pixel.style.width = `calc(100%/${size})`;
+        pixel.className = "pixel";
+        pixel.id = "inactive";
+        drawingField.appendChild(pixel);
+        pixel.onmouseover = function () {
+        pixel.style.backgroundColor = "black";
+        }
+            
+            
     }
-        
-        
-}
+};
 
-// on mouseover, change pixel div id from "inactive" to "active"
+// button creates alert, that changes amount of pixels appearing int he container, and what size
+let button = document.querySelector("#input") 
+button.addEventListener("click", input);
 
-document.querySelector(".pixel")
+function input() {
+    let size = prompt("input pixel size", "10") 
+    
+        if (size > 100 || size === 0) {
+            alert("must be between 1-100")
+        }
+        else {
+            createGrid() 
+        }
+    };
+

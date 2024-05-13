@@ -3,18 +3,18 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 80px;
-    width: 80px;
+    height: 400px;
+    width: 400px;
+    border: 1px solid grey;
     background-color: black;
     margin: 0;
     padding: 0;
 }
 .pixel {
-    height: 3px;
-    width: 3px;
+    height: 5px;
+    width: 5px;
     margin: 0;
     padding: 0;
-    border: 1px solid grey;
 }
 
 #inactive {
