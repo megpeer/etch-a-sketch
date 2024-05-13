@@ -1,7 +1,6 @@
 
 const drawingField = document.querySelector("#container");
-let pixel;
-let size = 20;
+let size = 10;
 
 function createGrid() {
     for (i = 0; i < size * size; i++){
