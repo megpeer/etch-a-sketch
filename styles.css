@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -6,20 +13,13 @@
     height: 400px;
     width: 400px;
     border: 1px solid grey;
-    background-color: black;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 .pixel {
     margin: 0;
     padding: 0;
-}
-
-#inactive {
+    opacity: 0.2;
     background-color: white;
-}
-
-
-#active {
-    background-color: black;
 }

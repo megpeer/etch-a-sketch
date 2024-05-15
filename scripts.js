@@ -9,12 +9,11 @@ function createGrid(size) {
         pixel.style.height = ((400/size) + "px");
         pixel.style.width = ((400/size) + "px");
         pixel.className = "pixel";
-        pixel.id = "inactive";
-        pixel.onmouseover = function () {
+        pixel.onmouseover = function() {
         pixel.style.backgroundColor = "black";
+         pixel.style.opacity = +pixel.style.opacity + 0.1;
+
         }
-            
-            
     }
 };
 
